@@ -48,7 +48,14 @@
             height: auto;
         }
 
-        
+        .kendaraan {
+            color: black;
+            background: none;
+            font-size: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
 
         .container-tombol {
             display: flex;
@@ -167,6 +174,32 @@
         .cart:active {
             opacity: 0.5;
         
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container-tombol {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .semua-tombol {
+                width: 80%;
+                margin: 10px 0;
+            }
+
+            .car-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .gambar img {
+                width: 80%;
+            }
         }
     </style>
 </head>
