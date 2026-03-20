@@ -45,6 +45,12 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
+         .logo {
+            display: flex;
+            align-items:center;
+            gap: 15px;
+        }
+
         .gambar {
             display: flex;
             justify-content: center;
@@ -219,19 +225,32 @@
             .gambar img {
                 width: 80%;
             }
+
+            #menu-toggle:checked ~ .semua-tombol {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+                font-size: 28px;
+                cursor: pointer;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <div class="logo">
+        <img src="https://freepnglogo.com/images/all_img/1720112618hyundai-logo-png-transparent-image.png" class="Hyundai-logo">
+        <img src="https://www.designyourway.net/blog/wp-content/uploads/2023/06/Logo-1-2.jpg" class="Kia-logo">
+    </div>
+
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon">=</label>
     
     <div class="container-tombol">
-        <img src="https://freepnglogo.com/images/all_img/1720112618hyundai-logo-png-transparent-image.png" class="Hyundai-logo">
-        <img src="https://www.designyourway.net/blog/wp-content/uploads/2023/06/Logo-1-2.jpg" class="Kia-logo">
-        
+       
         <a href="#kendaraan">
             <button class="semua-tombol">
             Kendaraan
