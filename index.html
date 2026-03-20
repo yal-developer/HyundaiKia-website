@@ -45,6 +45,13 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+        }
+
         .logo {
             display: flex;
             align-items:center;
@@ -53,7 +60,6 @@
 
         .container-tombol {
             display: flex;
-            align-items: center;
             gap: 25px;
         }
 
@@ -211,6 +217,10 @@
             height: auto;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         .menu-icon {
             display: none;
             font-size: 30px;
@@ -222,9 +232,15 @@
         }
 
         @media (max-width: 768px) {
-            .container-tombol {
+            .header {
                 flex-direction: column;
-                align-items: center;
+                align-items: flex-start;
+            }
+
+            .container-tombol {
+                display: none;
+                flex-direction: column;
+                width: 100%;
             }
 
             .semua-tombol {
@@ -241,7 +257,7 @@
                 width: 80%;
             }
 
-            #menu-toggle:checked ~ .semua-tombol {
+            #menu-toggle:checked + .menu-icon + .container-tombol {
                 display: flex;
             }
 
@@ -256,6 +272,7 @@
 
 <body>
 
+<div class="header">
     <div class="logo">
         <img src="https://freepnglogo.com/images/all_img/1720112618hyundai-logo-png-transparent-image.png" class="Hyundai-logo">
         <img src="https://www.designyourway.net/blog/wp-content/uploads/2023/06/Logo-1-2.jpg" class="Kia-logo">
@@ -290,6 +307,7 @@
             </button>
         </a>
     </div>
+</div>
 
      <p class="showroom">
         PT. Yusuf Al Ghifari Motors 
